@@ -9,8 +9,8 @@ require('dotenv/config');
 router.get(`/:id`, (req, res) => getById(req, res));
 router.get(`/:payload`, (req, res) => getByLoginCred(req, res));
 router.get(`/`, (req, res) => getAll(req, res));
+router.post(`/`, (req, res) => create(req, res));
 router.post(`/login`, (req, res) => loginUser(req, res));
-router.post(`/register`, (req, res) => create(req, res));
 router.put(`/:id`, (req, res) => update(req, res));
 router.delete(`/:id`, (req, res) => remove(req, res));
 
